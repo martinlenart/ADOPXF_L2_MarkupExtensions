@@ -24,5 +24,12 @@
                 VerticalOptions="CenterAndExpand"
                 Command="{Binding CreateCommand}"
                 CommandParameter="{x:Type Switch}" />
+        
+        <Button Text="Create a Button"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Command="{Binding CreateCommand}"
+                CommandParameter="{x:Type DatePicker}" />
+
     </StackLayout>
 </ContentPage>

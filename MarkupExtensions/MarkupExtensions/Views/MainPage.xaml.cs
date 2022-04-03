@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Input;
 using Xamarin.Forms;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MarkupExtensions.Views
 {

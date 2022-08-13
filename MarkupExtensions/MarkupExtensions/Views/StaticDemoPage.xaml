@@ -5,14 +5,15 @@
              xmlns:local="clr-namespace:MarkupExtensions"
              x:Class="MarkupExtensions.Views.StaticDemoPage"
              Title="x:Static Demo">
-    <StackLayout Margin="10, 0">
-        <Label Text="Label No. 1">
+    <Frame BorderColor="Black" Margin="50">
+    <StackLayout>
+        <Label x:Name="lblCounter" Text="Label No. 1" Margin="50" Opacity="0.5">
             <Label.FontSize>
                 <x:StaticExtension Member="local:AppConstants.NormalFontSize" />
             </Label.FontSize>
         </Label>
 
-        <Label Text="Label No. 2">
+        <Label Text="{x:Static local:RegionalGreeting.Greeting}">
             <Label.FontSize>
                 <x:Static Member="local:AppConstants.NormalFontSize" />
             </Label.FontSize>
@@ -37,7 +38,18 @@
                FontSize="{x:Static sys:Math.PI}"
                Scale="{x:Static sys:Math.E}" 
                HorizontalOptions="Center" />
-        <Label HorizontalTextAlignment="Center"
+<!--
+        Comment
+-->
+            <Button Text="Click Me!" Clicked="Counter_Clicked"/>
+
+            <Label Margin="100"
+               FontSize="{x:Static sys:Math.PI}"
+               Scale="{x:Static sys:Math.E}">
+                <Label.HorizontalOptions>Center</Label.HorizontalOptions>
+                &#x03C0; &#x00D7; E sized text Again
+            </Label>
+            <Label HorizontalTextAlignment="Center"
                FontSize="{x:Static local:AppConstants.NormalFontSize}">
             <Label.FormattedText>
                 <FormattedString>
@@ -48,4 +60,5 @@
             </Label.FormattedText>
         </Label>
     </StackLayout>
+    </Frame>
 </ContentPage>

@@ -4,8 +4,9 @@
              x:Class="MarkupExtensions.Views.ArrayDemoPage"
              Title="x:Array Demo Page">
     <StackLayout>
+        <BoxView x:Name="myBoxView"/>
         <ListView Margin="10">
-        <ListView.ItemsSource>
+            <ListView.ItemsSource>
             <x:Array Type="{x:Type Color}">
                 <Color>Aqua</Color>
                 <Color>Black</Color>

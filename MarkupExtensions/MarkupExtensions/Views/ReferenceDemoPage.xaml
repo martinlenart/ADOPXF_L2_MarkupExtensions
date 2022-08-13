@@ -7,22 +7,19 @@
     
     <StackLayout Margin="10, 0">
         
-        <Label Text="{Binding Source={x:Reference page},
-                              StringFormat='The type of this page is {0}'}"
-               FontSize="18"
-               VerticalOptions="CenterAndExpand"
-               HorizontalTextAlignment="Center" />
-
+ 
         <Slider x:Name="slider"
                 Maximum="360"
                 VerticalOptions="Center" />
+        
+        <Slider x:Name ="slider2" Minimum="0" Maximum="1" />
 
-        <Label BindingContext="{x:Reference slider}"
-               Text="{Binding Value, StringFormat='{0:F0}&#x00B0; rotation'}"
-               Rotation="{Binding Value}"
+        <Label Text="{Binding Source={x:Reference slider}, Path=Value}"
+               Rotation="{Binding Source={x:Reference slider}, Path=Value}"
+               Opacity="{Binding Source={x:Reference slider2}, Path=Value}"
                FontSize="24"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
-        
+
     </StackLayout>
 </ContentPage>
